@@ -195,6 +195,15 @@ class _FooterSectionState extends State<FooterSection> {
               ),
             ],
           ),
+          SpaceH4(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(StringConst.VERSION, style: footerTextStyle),
+              SpaceW4(),
+              Text(StringConst.VERSION_CODE, style: footerTextStyle),
+            ],
+          ),
           SpaceH20(),
         ],
       ),
@@ -274,9 +283,8 @@ class _FooterSectionState extends State<FooterSection> {
                   ..._buildFooterItems(footerItems),
                   SpaceH60(),
                   NimbusButton(
-                url: "https://calendly.com/meemanshoo/portfolio",
+                    url: "https://calendly.com/meemanshoo/portfolio",
                     linkTarget: LinkTarget.blank,
-
                     buttonTitle: StringConst.HIRE_ME,
                     buttonColor: AppColors.primaryColor,
                     onPressed: () {
@@ -351,7 +359,6 @@ class _FooterSectionState extends State<FooterSection> {
                 const Spacer(),
                 const NimBusButtonLink(
                   url: StringConst.CALENDLY_URL,
-
                   buttonTitle: StringConst.HIRE_ME,
                   buttonColor: AppColors.primaryColor,
                 ),

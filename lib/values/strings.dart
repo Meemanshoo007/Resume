@@ -217,6 +217,8 @@ class StringConst {
   static const String MADE_IN_GHANA = "Made in";
   static const String WITH_LOVE = "with";
   static const String FIND_ME = "Find me on..";
+  static const String VERSION = "Version";
+  static const String VERSION_CODE = "1.0.0";
 
   //URL Links
   static const String WEB_GENIUS_LAB_URL = "https://webgeniuslab.net/";
