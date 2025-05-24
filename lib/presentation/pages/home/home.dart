@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -22,6 +23,10 @@ import 'package:resume_master5/values/strings.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 import 'sections/nav_section/nav_section_web.dart';
+
+
+import 'dart:ui' as ui;
+import 'dart:html';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -50,7 +55,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     NavItemData(name: StringConst.ABOUT, key: GlobalKey()),
     NavItemData(name: StringConst.SKILLS, key: GlobalKey()),
     NavItemData(name: StringConst.PROJECTS, key: GlobalKey()),
-    NavItemData(name: StringConst.AWARDS, key: GlobalKey()),
+    // NavItemData(name: StringConst.AWARDS, key: GlobalKey()),
     NavItemData(name: StringConst.BLOG, key: GlobalKey()),
   ];
 
@@ -58,6 +63,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
+
+
+
+
+
     _scrollController.addListener(() {
       if (_scrollController.position.pixels < 100) {
         _controller.reverse();
@@ -201,13 +211,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       ),
                       Column(
                         children: [
-                          Container(
-                            key: navItems[4].key,
-                            child: const AwardsSection(),
-                          ),
+                          // Container(
+                          //   key: navItems[4].key,
+                          //   child: const AwardsSection(),
+                          // ),
+
                           SpaceH40(),
                           Container(
-                            key: navItems[5].key,
+                            key: navItems[4].key,
                             child: const BlogSection(),
                           ),
                           const FooterSection(),
